@@ -1,0 +1,143 @@
+---
+import { Image } from "astro:assets";
+import ContentLayout from "astro-theme-university/layouts/ContentLayout.astro";
+import PaintingCredit from "../../components/PaintingCredit.astro";
+import { getPainting, paintings } from "../../lib/paintings";
+import { siteConfig } from "../../site-config";
+
+const hero = getPainting("landscapes");
+const named = paintings.filter((painting) => painting.attribution === "named");
+const attributed = paintings.filter((painting) => painting.attribution === "attributed");
+const after = paintings.filter((painting) => painting.attribution === "after");
+---
+
+<ContentLayout
+  title="The plates"
+  description="The six paintings this site is built from, and what each museum is willing to claim about who made them."
+  heroImage={hero.image}
+  heroImageAlt={hero.alt}
+  {...siteConfig}
+>
+  <p>
+    Every page on this site opens on a painting. They are not decoration, and
+    they are not a set of Tang Yins. Sorted by what the holding museum is
+    actually willing to say, {named.length} of them are given to Tang Yin
+    outright, {attributed.length} is qualified as attributed to him, and
+    {" "}{after.length} has no artist at all.
+  </p>
+
+  <p>
+    The label under each image is transcribed from the museum's own catalogue
+    record, not written here. That is the point of showing them together. An
+    attribution is a claim made by an institution at a particular moment, with
+    a particular amount of evidence behind it, and reading it as a fact about
+    the object is the habit this course spends twelve weeks trying to break.
+  </p>
+
+  <p>
+    Two things worth noticing before you scroll. The Metropolitan Museum of Art
+    gives Tang Yin's dates as 1470 to 1524 and the Cleveland Museum of Art gives
+    them as 1470 to 1523, so the field does not fully agree on when he died. And
+    every image here is published by its museum as public domain or CC0, which
+    is why the course can reproduce them at all.
+  </p>
+
+  <h2>Given to Tang Yin</h2>
+
+  {
+    named.map((painting) => (
+      <figure class="plate">
+        <a href={painting.url} rel="noopener">
+          <Image
+            src={painting.image}
+            alt={painting.alt}
+            widths={[400, 800]}
+            sizes="(min-width: 60rem) 40rem, 90vw"
+            class="plate-image"
+          />
+        </a>
+        <PaintingCredit painting={painting} />
+      </figure>
+    ))
+  }
+
+  <h2>Attributed to Tang Yin</h2>
+
+  <p>
+    Cleveland's published label for this scroll opens "Attributed to Tang Yin",
+    where its label for Mount Hua above just says "Tang Yin". Two words, one
+    catalogue, and a different claim. The museum is telling you it thinks this
+    is his and that it is not prepared to say so flatly. Notice how easily that
+    qualifier disappears when a painting gets reproduced somewhere with a
+    shorter caption.
+  </p>
+
+  {
+    attributed.map((painting) => (
+      <figure class="plate">
+        <a href={painting.url} rel="noopener">
+          <Image
+            src={painting.image}
+            alt={painting.alt}
+            widths={[400, 800]}
+            sizes="(min-width: 60rem) 40rem, 90vw"
+            class="plate-image"
+          />
+        </a>
+        <PaintingCredit painting={painting} />
+      </figure>
+    ))
+  }
+
+  <h2>After Tang Yin</h2>
+
+  <p>
+    The Met records this scroll with two artist entries. One is "Unidentified
+    artist". The other is "After Tang Yin", which is a statement about what the
+    painting follows rather than about who held the brush. Nothing here says it
+    is a forgery. It says the museum has not found anyone to name, and that the
+    resemblance is close enough to file under his name anyway. Both of those are
+    findings, and they are different findings.
+  </p>
+
+  {
+    after.map((painting) => (
+      <figure class="plate">
+        <a href={painting.url} rel="noopener">
+          <Image
+            src={painting.image}
+            alt={painting.alt}
+            widths={[400, 800]}
+            sizes="(min-width: 60rem) 40rem, 90vw"
+            class="plate-image"
+          />
+        </a>
+        <PaintingCredit painting={painting} />
+      </figure>
+    ))
+  }
+</ContentLayout>
+
+<style>
+  .plate {
+    margin-block: var(--at-spacing-xl);
+    margin-inline: 0;
+  }
+
+  .plate-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 32rem;
+    object-fit: contain;
+    object-position: center;
+    background: var(--at-bg-alt);
+    border: 1px solid var(--at-border);
+    border-radius: var(--at-border-radius);
+  }
+
+  .plate a:focus-visible .plate-image {
+    outline: 2px solid var(--at-link);
+    outline-offset: 2px;
+  }
+</style>

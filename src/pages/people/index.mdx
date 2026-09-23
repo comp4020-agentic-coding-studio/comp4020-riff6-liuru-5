@@ -2,8 +2,18 @@
 title: People
 description: "Who teaches the course, and how to reach them."
 heroTitle: People
+heroImage: /src/assets/paintings/moon-goddess-change.jpg
+heroImageAlt: >-
+  Hanging scroll of a standing court lady in long pale robes with a blue sash,
+  her hair dressed in an elaborate coil, holding a sprig of blossom. A poem is
+  brushed at the upper right and the margins are crowded with further
+  inscriptions and red collector seals.
 ---
 
+import PaintingCredit from "../../components/PaintingCredit.astro";
 import PeopleGrid from "../../components/PeopleGrid.astro";
+import { getPainting } from "../../lib/paintings";
+
+<PaintingCredit painting={getPainting("moon-goddess-change")} cropped />
 
 <PeopleGrid />

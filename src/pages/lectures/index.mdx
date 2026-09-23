@@ -2,9 +2,19 @@
 title: Lectures
 description: "What is covered, week by week, and which topics each lecture draws on."
 heroTitle: Lectures
+heroImage: /src/assets/paintings/mount-hua.jpg
+heroImageAlt: >-
+  Tall hanging scroll of layered mountain peaks built up in grey ink with ochre
+  and pale blue-green washes. Rocks and a stream lie at the foot of the
+  composition, an inscription fills the upper right, and red collector seals run
+  down both edges of the mount.
 ---
 
 import LecturesGrid from "../../components/LecturesGrid.astro";
+import PaintingCredit from "../../components/PaintingCredit.astro";
+import { getPainting } from "../../lib/paintings";
+
+<PaintingCredit painting={getPainting("mount-hua")} cropped />
 
 Every lecture the course claims to run gets a dated page and a teaching-team
 reference. A course decides how many lectures it needs; one of them carries a

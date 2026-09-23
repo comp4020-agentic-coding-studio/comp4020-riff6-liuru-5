@@ -4,10 +4,19 @@ description:
   "Every piece of graded work in the course, what it is worth, and when it is
   due."
 heroTitle: Assessment
+heroImage: /src/assets/paintings/listening-to-the-qin.jpg
+heroImageAlt: >-
+  Hanging scroll on olive-toned silk. A bare, gnarled plum tree arches over an
+  open-sided pavilion where a seated figure plays a qin, several robed figures
+  cross the ground towards it, and a pale full moon hangs at the upper left.
 ---
 
 import PaintingReference from "../../components/PaintingReference.astro";
 import AssessmentsGrid from "../../components/AssessmentsGrid.astro";
+import PaintingCredit from "../../components/PaintingCredit.astro";
+import { getPainting } from "../../lib/paintings";
+
+<PaintingCredit painting={getPainting("listening-to-the-qin")} cropped />
 
 Paint, investigate, then paint again. All students work from the same
 Tang Yin–inspired landscape, using practical studies to sharpen their judgement
