@@ -45,8 +45,8 @@ const painting = paintingForWeek(assessment.data.week);
   }
   <p><strong>Due:</strong> {formatCourseDate(assessment.data.due)} · <strong>Weight:</strong> {assessment.data.weight}%</p>
   {assessment.id === "final-project" && <PaintingReference />}
-  <Content />
   {assessment.id === "attribution-note" && <AttributionChallenge />}
+  <Content />
   <SpecList spec={assessment.data.spec}>
     The brief poses the problem and leaves room for a response. The spec is the
     fixed part: what a marker checks. Some lines can be checked mechanically;
