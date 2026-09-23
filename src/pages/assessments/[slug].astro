@@ -29,11 +29,11 @@ const painting = paintingForWeek(assessment.data.week);
 <ContentLayout
   title={assessment.data.title}
   description={assessment.data.description}
-  heroImage={painting.image}
+  heroImage={assessment.id === "attribution-note" ? undefined : painting.image}
   heroImageAlt={painting.alt}
   {...siteConfig}
 >
-  <PaintingCredit painting={painting} cropped />
+  {assessment.id !== "attribution-note" && <PaintingCredit painting={painting} cropped />}
   {
     assessment.data.draft && (
       <Callout type="warning">
