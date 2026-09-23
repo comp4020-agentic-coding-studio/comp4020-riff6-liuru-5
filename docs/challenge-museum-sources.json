@@ -1,0 +1,146 @@
+[
+  {
+    "accession_number": "1969.116",
+    "title": "Mount Hua",
+    "creation_date": "1506",
+    "creators": [
+      {
+        "id": 22854,
+        "description": "Tang Yin (Chinese, 1470–1523)",
+        "extent": null,
+        "qualifier": null,
+        "role": "artist",
+        "biography": null,
+        "name_in_original_language": "唐寅",
+        "birth_year": "1470",
+        "death_year": "1523",
+        "use_in_caption": true,
+        "include_extent": false,
+        "weight": 1
+      }
+    ],
+    "creditline": "John L. Severance Fund",
+    "share_license_status": "CC0",
+    "url": "https://clevelandart.org/art/1969.116",
+    "images": {
+      "annotation": null,
+      "web": {
+        "url": "https://openaccess-cdn.clevelandart.org/1969.116/1969.116_web.jpg",
+        "width": "379",
+        "height": "893",
+        "filesize": "267778",
+        "filename": "1969.116_web.jpg"
+      },
+      "print": {
+        "url": "https://openaccess-cdn.clevelandart.org/1969.116/1969.116_print.jpg",
+        "width": "1442",
+        "height": "3400",
+        "filesize": "3178136",
+        "filename": "1969.116_print.jpg"
+      },
+      "full": {
+        "url": "https://openaccess-cdn.clevelandart.org/1969.116/1969.116_full.tif",
+        "width": "2120",
+        "height": "5000",
+        "filesize": "31813516",
+        "filename": "1969.116_full.tif"
+      }
+    }
+  },
+  {
+    "accession_number": "1977.199",
+    "title": "Listening to the Qin",
+    "creation_date": "late 1400s–early 1500s",
+    "creators": [
+      {
+        "id": 22854,
+        "description": "Tang Yin (Chinese, 1470–1523)",
+        "extent": null,
+        "qualifier": "attributed to",
+        "role": "artist",
+        "biography": null,
+        "name_in_original_language": "唐寅",
+        "birth_year": "1470",
+        "death_year": "1523",
+        "use_in_caption": true,
+        "include_extent": false,
+        "weight": 1
+      }
+    ],
+    "creditline": "Gift of Herbert F. Leisy in memory of his wife, Helen Stamp Leisy",
+    "share_license_status": "CC0",
+    "url": "https://clevelandart.org/art/1977.199",
+    "images": {
+      "annotation": null,
+      "web": {
+        "url": "https://openaccess-cdn.clevelandart.org/1977.199/1977.199_web.jpg",
+        "width": "674",
+        "height": "900",
+        "filesize": "287695",
+        "filename": "1977.199_web.jpg"
+      },
+      "print": {
+        "url": "https://openaccess-cdn.clevelandart.org/1977.199/1977.199_print.jpg",
+        "width": "2545",
+        "height": "3400",
+        "filesize": "3439500",
+        "filename": "1977.199_print.jpg"
+      },
+      "full": {
+        "url": "https://openaccess-cdn.clevelandart.org/1977.199/1977.199_full.tif",
+        "width": "4992",
+        "height": "6668",
+        "filesize": "99885392",
+        "filename": "1977.199_full.tif"
+      }
+    }
+  },
+  {
+    "accession_number": "1976.94",
+    "title": "Scholar-Hermits in the Autumn Mountains",
+    "creation_date": "1500–1510",
+    "creators": [
+      {
+        "id": 22854,
+        "description": "Tang Yin (Chinese, 1470–1523)",
+        "extent": null,
+        "qualifier": null,
+        "role": "artist",
+        "biography": null,
+        "name_in_original_language": "唐寅",
+        "birth_year": "1470",
+        "death_year": "1523",
+        "use_in_caption": true,
+        "include_extent": false,
+        "weight": 1
+      }
+    ],
+    "creditline": "Andrew R. and Martha Holden Jennings Fund",
+    "share_license_status": "CC0",
+    "url": "https://clevelandart.org/art/1976.94",
+    "images": {
+      "annotation": null,
+      "web": {
+        "url": "https://openaccess-cdn.clevelandart.org/1976.94/1976.94_web.jpg",
+        "width": "900",
+        "height": "56",
+        "filesize": "107374",
+        "filename": "1976.94_web.jpg"
+      },
+      "print": {
+        "url": "https://openaccess-cdn.clevelandart.org/1976.94/1976.94_print.jpg",
+        "width": "3400",
+        "height": "212",
+        "filesize": "326072",
+        "filename": "1976.94_print.jpg"
+      },
+      "full": {
+        "url": "https://openaccess-cdn.clevelandart.org/1976.94/1976.94_full.tif",
+        "width": "73044",
+        "height": "4560",
+        "filesize": "999269212",
+        "filename": "1976.94_full.tif"
+      }
+    }
+  }
+]

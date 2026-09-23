@@ -24,7 +24,7 @@ outlined and filled) that a competent argument can point to instead of
 gesturing at a general "feel."
 
 That vocabulary is this week's actual content, because it's the thing
-students arrive without and the brushwork study and attribution note require. "The brushwork
+students arrive without and the six-painting challenge requires. "The brushwork
 looks right" is not an argument; "the terminal taper on these strokes
 matches three securely attributed works and not this one" is the same
 judgement, made checkable.
@@ -35,5 +35,5 @@ judgement, made checkable.
 - a working vocabulary: stroke starts and ends, pressure variation, how
   forms are built rather than outlined
 - comparing a securely attributed painting against a disputed one, live
-- the painted study and attribution note: due end of week 5, grounded in materials and/or
-  brushwork
+- Spot the real painting: due end of week 5, with initial visual judgements
+  followed by a source-checking reflection

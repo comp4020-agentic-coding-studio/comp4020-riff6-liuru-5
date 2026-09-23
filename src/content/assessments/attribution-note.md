@@ -1,27 +1,29 @@
 ---
-title: "Brushwork study and attribution note"
+title: "Spot the real painting"
 description: >-
-  Paint a study of the shared Tang Yin–inspired landscape, then explain what
-  copying its brushwork can and cannot tell you about authorship.
+  Three historical paintings. Three generated imitations. Identify which is
+  which, defend your choices, then test your judgement against the sources.
 week: 4
 due: 2027-03-26T12:00:00+10:00
 weight: 25
 marking:
   mode: weighted
   criteria:
-    - name: Close observation and purposeful brushwork
-      weight: 40
-    - name: Process evidence and comparison
-      weight: 35
-    - name: Attribution reasoning and its limits
-      weight: 25
+    - name: Initial identification accuracy
+      weight: 20
+    - name: Specific visual evidence and comparisons
+      weight: 50
+    - name: Reflection, source checking and calibrated confidence
+      weight: 30
 spec:
-  - an independently painted study of the supplied reference, retaining its
-    pine, pavilion, stream and layered mountains
-  - at least three process images and three annotated comparisons of specific
-    passages in the reference and your study
-  - a 600–800 word note explaining materials, brushwork decisions and why
-    visual similarity alone cannot establish authorship
+  - classifies all six paintings A–F, choosing exactly three as historical
+    paintings and three as generated imitations before revealing the sources
+  - records an initial verdict, confidence level and two specific visual
+    observations for every painting
+  - submits an 800–1200 word illustrated report with at least three annotated
+    details and a reflection comparing initial choices with the source reveal
+  - distinguishes a documented historical object from a secure attribution
+    to Tang Yin and preserves any museum attribution qualifiers
 related:
   - assessments/dossier
   - assessments/final-project
@@ -29,40 +31,49 @@ related:
 
 ## The brief
 
-> Paint your own study of *Pine Pavilion after Rain*, the reference above.
-> Use the act of copying to investigate the gap between looking similar and
-> being made by the same hand.
+> Spot the three real paintings among six images. Explain your choices
+> before you look at the answers, then investigate what you got right or wrong.
 
-Keep the pine, pavilion, stream and receding mountains recognisable, and
-follow their broad arrangement. Study three contrasting effects: the pine's
-fine marks, the rocks' broken textures and the mountains' soft washes.
-Aim for an attentive interpretation; you are not expected to reproduce every
-mark. The reference is an original AI-generated teaching image inspired by
-Tang Yin, **not an authentic Tang Yin painting or historical evidence**.
+The gallery below mixes **three historical paintings from a museum collection**
+with **three newly AI-generated imitations inspired by Tang Yin**. Here “real”
+means a documented historical painting, not a guarantee of Tang Yin's authorship.
+“Fake” means a generated image made for this exercise, not a historical forgery.
+One museum record uses a qualified attribution; that distinction matters.
 
-## Materials and process
+## First look: make your case
 
-Work on A4 or larger paper with ink or watercolour and brushes, or paint
-manually in a digital painting app on a canvas at least 1500 pixels tall.
-Ordinary student materials are sufficient. No prior ink-painting experience
-is required; marks reward observation, experiments and explained decisions.
-Do not trace, filter the reference or use generated imagery as your painting.
-Digital painters should keep their layers or time-lapse as process evidence.
+Inspect each painting at full size using its image link. Before revealing the
+answers or searching for the images, record a table in your own document:
+**A–F, real or generated, confidence from 50–100%, and two visual observations**.
+Choose exactly three as real. Compare stroke endings, rock textures, spatial
+relationships, repeated forms and transitions between ink and empty space.
+Explain where you see each feature instead of saying that a painting “feels old”.
 
-Start with a small sheet of stroke and wash experiments. Photograph or export
-at least three stages: initial layout, work in progress and finished study.
-Keep your experiments for the final project.
+Do not use reverse-image search, museum lookups, file metadata or AI detectors
+for this first pass. Seals, apparent paper ageing, image dimensions and tidy
+brushwork are not proof on their own. You are looking at reproductions and
+cannot establish the physical paper or ink from pixels alone.
+
+## Reveal, research and reflect
+
+Once your initial table is saved, enter your choices in the gallery and reveal
+the answers. Read the linked museum records, retain their exact attribution
+qualifiers and record your revised judgement. Discuss at least one misleading
+clue and one uncertainty that the image alone could not resolve. If every choice
+was correct, explain which was least certain and why.
+
+The reveal is a learning aid on this public course site, not a secure exam or
+an assignment submission. Your selections are not sent or saved. Keep the
+original table in your report rather than rewriting it after seeing the answer.
 
 ## What you submit
 
-Submit one PDF containing a full view of your painting, your experiment sheet,
-at least three process images, and three side-by-side detail comparisons.
-Add a **600–800 word attribution note** explaining your materials and decisions,
-where your marks differ from the reference, and why a convincing copy would
-not establish Tang Yin's authorship. Name at least one kind of independent
-historical or material evidence an attribution would require. A digital
-reference cannot tell you the physical paper or ink of a historical object.
+One PDF with your initial six-row table, **800–1200 words** of argument and
+reflection, and at least three annotated image details spanning both historical
+and generated examples. Cite the revealed museum sources and credit generated
+images as course teaching material. Include the before-and-after verdicts.
+No painting submission is required for this first assignment.
 
-Credit the supplied reference as “*Pine Pavilion after Rain*, AI-generated
-course reference, inspired by Tang Yin.” Sign your own work with your own name.
-Declare assistance according to the [policies page](/policies/).
+The six initial classifications share the accuracy mark equally. Reasoning and
+reflection account for the other 80% of this assignment. Declare assistance
+according to the [policies page](/policies/).

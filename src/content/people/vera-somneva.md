@@ -18,8 +18,8 @@ re-catalogued a private collection three times. The examiners praised its
 rigour and requested a conclusion. She supplied a fourth catalogue.
 
 At Slop University she convenes The Tang Yin Problem and teaches the toolkit
-weeks, from materials to the painting market. She designed the painting
-assignments because “that looks easy to copy” is a claim best tested with a
+weeks, from materials to the painting market. She designed the final painting
+project because “that looks easy to copy” is a claim best tested with a
 brush in your hand. Her own demonstration sheet is labelled “useful failures”
 and is considerably longer than the successful one.
 

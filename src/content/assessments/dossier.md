@@ -22,7 +22,7 @@ spec:
     seals, colophons, market context) against one named painting
   - keeps an explicit evidence log, including evidence that complicates or
     contradicts the eventual conclusion
-  - includes two illustrated comparisons with your painted study and three
+  - includes two illustrated comparisons with the first assignment’s images and three
     proposed experiments for the final painting
   - reaches a stated verdict with a stated confidence level, not an
     open-ended "more research is needed"
@@ -37,8 +37,8 @@ related:
 > painting: every relevant evidence type this course has taught, an
 > explicit log of where they agree and disagree, and a stated verdict.
 
-This is the attribution note's method scaled up, not a longer version of the
-same argument. Where the note could rest on one or two evidence types, the
+This is the first assignment's evidence-based reasoning scaled up, not a longer version of the
+same argument. Where the first exercise began with visual observations, the
 dossier has to work at least three, and its central discipline is the log:
 every piece of evidence goes in, including the pieces that argue against
 where you end up. A dossier that quietly drops an inconvenient seal reading
@@ -50,15 +50,14 @@ You may use the painting your seminar group shortlisted in week 7--8, or a
 different disputed painting entirely, provided its dispute is documented in
 the literature rather than invented for the assignment.
 
-## Connect the dossier to your painting
+## Connect looking to making
 
-Your subject here must be a documented disputed historical painting, not the
-generated course reference or your own study. Include a **maker’s comparison**
-within the word count: place two cited details from the historical reproduction
-beside corresponding passages in your first painted study. Explain what making
-those marks helped you notice, and where similarity stops being evidence of
-authorship. Finish with three concrete brushwork or composition experiments
-that you will carry into the final painting project.
+Your subject must be a documented disputed historical painting, not a generated
+course image. Within the word count, compare two cited details from your
+historical subject with details from the first assignment’s six-image set.
+Revisit one of your initial visual clues: did it survive source checking, or
+was it an unreliable shortcut? Finish with three brushwork or composition
+experiments to try in the final painting project.
 
 ## What you submit
 

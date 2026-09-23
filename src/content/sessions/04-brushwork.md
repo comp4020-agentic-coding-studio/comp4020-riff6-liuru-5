@@ -2,7 +2,7 @@
 title: "Brushwork clinic"
 description:
   Building a shared vocabulary for describing a stroke, then using it
-  against your own attribution-note painting.
+  against the six-painting challenge.
 week: 4
 date: 2027-03-15
 teachers:
@@ -10,7 +10,7 @@ teachers:
 spec:
   - you can describe a specific stroke using the seminar's shared vocabulary,
     not general impressions
-  - you can apply that vocabulary to your own attribution-note painting and
+  - you can apply that vocabulary to the six-painting challenge and
     say what it does or doesn't support
 related:
   - lectures/week-04
@@ -19,16 +19,15 @@ related:
 
 ## Before the seminar
 
-Bring the supplied *Pine Pavilion after Rain* reference, your brushwork
-experiments and a work-in-progress study. Bring brushes and paper or your
-digital painting setup.
+Bring the six challenge images and your initial observation table. Save the
+source reveal until you have recorded a judgement for every painting.
 
 ## In the seminar
 
 The first half is a shared exercise: describing the same stroke, from the
-same generated course reference, in the vocabulary from lecture, until the
+same challenge image, in the vocabulary from lecture, until the
 room converges on similar descriptions. The second half turns that
-vocabulary on your own painted study, in pairs, with your
+vocabulary on the remaining challenge images, in pairs, with your
 partner pushing back on any description vague enough to mean nothing.
 
 ## Afterwards

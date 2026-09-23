@@ -5,6 +5,7 @@ import RelatedContent from "astro-course-university/components/RelatedContent.as
 import SpecList from "astro-course-university/components/SpecList.astro";
 import Callout from "astro-theme-university/components/Callout.astro";
 import ContentLayout from "astro-theme-university/layouts/ContentLayout.astro";
+import AttributionChallenge from "../../components/AttributionChallenge.astro";
 import PaintingReference from "../../components/PaintingReference.astro";
 import MarkingModel from "../../components/MarkingModel.astro";
 import { formatCourseDate } from "../../lib/dates";
@@ -37,8 +38,9 @@ const { Content } = await render(assessment);
     )
   }
   <p><strong>Due:</strong> {formatCourseDate(assessment.data.due)} · <strong>Weight:</strong> {assessment.data.weight}%</p>
-  {assessment.id !== "dossier" && <PaintingReference />}
+  {assessment.id === "final-project" && <PaintingReference />}
   <Content />
+  {assessment.id === "attribution-note" && <AttributionChallenge />}
   <SpecList spec={assessment.data.spec}>
     The brief poses the problem and leaves room for a response. The spec is the
     fixed part: what a marker checks. Some lines can be checked mechanically;

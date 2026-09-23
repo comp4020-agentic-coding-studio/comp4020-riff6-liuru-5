@@ -1,0 +1,169 @@
+---
+import { Image } from "astro:assets";
+import a from "../assets/images/attribution-challenge/painting-a.avif";
+import b from "../assets/images/attribution-challenge/painting-b.avif";
+import c from "../assets/images/attribution-challenge/painting-c.avif";
+import d from "../assets/images/attribution-challenge/painting-d.avif";
+import e from "../assets/images/attribution-challenge/painting-e.avif";
+import f from "../assets/images/attribution-challenge/painting-f.avif";
+
+const paintings = [
+  { id: "A", image: a, alt: "Tall mountain landscape with rocky peaks, trees and a waterfall.", answer: "generated", title: "Mountain retreat", note: "An original AI-generated imitation made for this exercise, inspired by Tang Yin. Its aged surface and ink textures are simulated; it has no historical object or provenance." },
+  { id: "B", image: b, alt: "Figures beside a pavilion beneath a branching tree in a muted ink landscape.", answer: "real", title: "Listening to the Qin", note: "Attributed to Tang Yin, late 1400s–early 1500s. Ink and light color on silk. A historical museum object, but the attribution is qualified: do not turn ‘attributed to’ into certainty.", url: "https://www.clevelandart.org/art/1977.199", credit: "Cleveland Museum of Art, 1977.199. Gift of Herbert F. Leisy in memory of his wife, Helen Stamp Leisy. CC0." },
+  { id: "C", image: c, alt: "Vertical landscape of steep mountain summits, scattered trees and mist.", answer: "real", title: "Mount Hua", note: "Tang Yin, 1506. Ink and light color on paper. The museum record supplies a named historical object, date and attribution; a resemblance to it is not itself proof of authorship.", url: "https://www.clevelandart.org/art/1969.116", credit: "Cleveland Museum of Art, 1969.116. John L. Severance Fund. CC0." },
+  { id: "D", image: d, alt: "A musician in a pavilion and listeners under a tree with a pale moon above.", answer: "generated", title: "Moonlit music pavilion", note: "An original AI-generated imitation made for this exercise, inspired by Tang Yin. Traditional subjects, fine lines and a seal-like mark do not establish an artist or a date." },
+  { id: "E", image: e, alt: "Wide river landscape with ridges, autumn trees, small figures and a dwelling.", answer: "generated", title: "Autumn river retreat", note: "An original AI-generated imitation made for this exercise, inspired by Tang Yin. The handscroll composition and silk-like texture are visual inventions, not evidence of a surviving historical painting." },
+  { id: "F", image: f, alt: "Long horizontal handscroll with mountains, trees, water and calligraphic sections.", answer: "real", title: "Scholar-Hermits in the Autumn Mountains", note: "Tang Yin, 1500–1510. Ink and light color on silk. This is the museum's full handscroll reproduction. Open it separately to inspect the long composition; format alone is not an authenticity test.", url: "https://www.clevelandart.org/art/1976.94", credit: "Cleveland Museum of Art, 1976.94. Andrew R. and Martha Holden Jennings Fund. CC0." },
+];
+---
+
+<section id="painting-challenge" aria-labelledby="challenge-title">
+  <h2 id="challenge-title">Six paintings. Which three are real?</h2>
+  <p>Save your initial evidence table first. Inspect the images, choose a verdict for each, then reveal the sources. Open any image for a closer look.</p>
+  <form id="attribution-challenge">
+    <div class="painting-grid">
+      {paintings.map((painting) => (
+        <fieldset>
+          <legend>Painting {painting.id}</legend>
+          <a class="painting-view" href={painting.image.src} target="_blank" rel="noopener" aria-label={`Inspect painting ${painting.id} at full size (new tab)`}>
+            <Image src={painting.image} alt={painting.alt} widths={[400, 800]} sizes="(max-width: 680px) 100vw, 400px" />
+          </a>
+          <p><a href={painting.image.src} target="_blank" rel="noopener">Inspect {painting.id} at full size (new tab)</a></p>
+          <label for={`verdict-${painting.id}`}>Your verdict for {painting.id}</label>
+          <select id={`verdict-${painting.id}`} name={painting.id} required>
+            <option value="">Choose a verdict</option>
+            <option value="real">Real historical painting</option>
+            <option value="generated">Generated imitation</option>
+          </select>
+        </fieldset>
+      ))}
+    </div>
+    <p>Choose exactly three real paintings and three generated imitations. This checks your choices locally; it does not submit or save your assignment.</p>
+    <button type="submit">Reveal answers and sources</button>
+    <button type="reset">Start again</button>
+    <p id="challenge-status" role="status" aria-live="polite"></p>
+  </form>
+  <noscript><p>The interactive reveal needs JavaScript. You can still inspect all six images and record your answers for discussion with your tutor.</p></noscript>
+  <section id="challenge-answers" hidden aria-labelledby="answers-title" data-pagefind-ignore>
+    <h3 id="answers-title" tabindex="-1">Answers and sources</h3>
+    <p>“Real” identifies a documented historical object. It does not settle every attribution question. Compare these records with your saved first impressions.</p>
+    {paintings.map((painting) => (
+      <article data-answer={painting.answer} data-painting={painting.id}>
+        <h4>{painting.id} · {painting.answer === "real" ? "Real historical painting" : "Generated imitation"} · {painting.title}</h4>
+        <p class="choice-result"></p>
+        <p>{painting.note}</p>
+        {painting.url && <p><a href={painting.url}>{painting.title} — museum record</a><br /><small>{painting.credit}</small></p>}
+        {!painting.url && <p><small>Generated for this course using OpenAI image generation, September 2026.</small></p>}
+      </article>
+    ))}
+  </section>
+</section>
+
+<script>
+  function setupChallenge() {
+    const form = document.querySelector<HTMLFormElement>("#attribution-challenge");
+    const answers = document.querySelector<HTMLElement>("#challenge-answers");
+    const status = document.querySelector<HTMLElement>("#challenge-status");
+    if (!form || !answers || !status || form.dataset.ready) return;
+    form.dataset.ready = "true";
+    const selections = [...form.querySelectorAll<HTMLSelectElement>("select")];
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+      if (selections.filter((select) => select.value === "real").length !== 3) {
+        answers.hidden = true;
+        status.textContent = "Choose exactly three paintings as real before revealing the answers.";
+        return;
+      }
+      let correct = 0;
+      answers.querySelectorAll<HTMLElement>("[data-answer]").forEach((entry) => {
+        const selected = selections.find((select) => select.name === entry.dataset.painting)!;
+        const matches = selected.value === entry.dataset.answer;
+        if (matches) correct++;
+        entry.querySelector<HTMLElement>(".choice-result")!.textContent =
+          `You chose ${selected.value === "real" ? "real" : "generated"} — ${matches ? "correct" : "revisit your evidence"}.`;
+      });
+      status.textContent = `${correct} of 6 correct. Compare the sources with your initial evidence; this score is not an assignment submission.`;
+      answers.hidden = false;
+      document.querySelector<HTMLElement>("#answers-title")?.focus();
+    });
+    form.addEventListener("change", () => {
+      answers.hidden = true;
+      status.textContent = "Choices changed. Reveal again to check your current selection.";
+    });
+    form.addEventListener("reset", () => {
+      answers.hidden = true;
+      status.textContent = "Choices cleared. Your written evidence table remains your own record.";
+    });
+  }
+  setupChallenge();
+  document.addEventListener("astro:page-load", setupChallenge);
+</script>
+
+<style>
+  .painting-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  fieldset {
+    min-width: 0;
+    margin: 0;
+    padding: 1rem;
+    border: 1px solid var(--at-text-secondary);
+    border-radius: 0.5rem;
+  }
+
+  legend {
+    padding-inline: 0.4rem;
+    font-weight: 700;
+  }
+
+  .painting-view {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 22rem;
+    background: var(--at-bg-alt);
+  }
+
+  .painting-view img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  label {
+    display: block;
+    margin-block: 0.75rem 0.4rem;
+  }
+
+  select {
+    width: 100%;
+    min-height: 2.75rem;
+    padding: 0.5rem;
+    font: inherit;
+    color: var(--at-text);
+    background: var(--at-bg);
+  }
+
+  button {
+    margin: 0.25rem 0.5rem 0.25rem 0;
+    padding: 0.75rem 1rem;
+    font: inherit;
+    cursor: pointer;
+  }
+
+  #challenge-answers article {
+    padding-block: 0.75rem;
+    border-bottom: 1px solid var(--at-text-secondary);
+  }
+
+  @media (max-width: 680px) {
+    .painting-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
