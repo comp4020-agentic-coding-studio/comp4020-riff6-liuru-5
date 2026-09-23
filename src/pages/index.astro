@@ -2,7 +2,7 @@
 import Card from "astro-theme-university/components/Card.astro";
 import CardGrid from "astro-theme-university/components/CardGrid.astro";
 import ContentLayout from "astro-theme-university/layouts/ContentLayout.astro";
-import heroImage from "../assets/images/hero-home.avif";
+import heroImage from "../assets/images/canberra-ink-landscape.avif";
 import { courseMeta } from "../course-config";
 import { sessionLabels, siteConfig } from "../site-config";
 ---
@@ -11,12 +11,17 @@ import { sessionLabels, siteConfig } from "../site-config";
   title={`${courseMeta.code}: ${courseMeta.title}`}
   description={courseMeta.description}
   heroImage={heroImage}
-  heroImageAlt="Two crossing brush strokes, gold and black, overlaid with three nested carved-seal marks, flat shapes on warm cream in a two-ink risograph print"
+  heroImageAlt="Tang Yin–inspired ink landscape of Canberra: eucalyptus trees beside Lake Burley Griffin, Parliament House across the water and Telstra Tower among misty hills."
   {...siteConfig}
 >
   <ul class="course-tags" aria-label="Course tags">
     {courseMeta.tags.map((tag) => <li>{tag}</li>)}
   </ul>
+
+  <p class="artwork-caption">
+    <em>Canberra in ink</em> · A Tang Yin–inspired landscape.
+    <a href={heroImage.src} target="_blank" rel="noopener">View the full artwork (new tab)</a>
+  </p>
 
   <h2>What you will do</h2>
   <p>
@@ -66,6 +71,12 @@ import { sessionLabels, siteConfig } from "../site-config";
 </ContentLayout>
 
 <style>
+  .artwork-caption {
+    margin-block: -1rem 2rem;
+    color: var(--at-text-secondary);
+    font-size: 0.9rem;
+  }
+
   .course-tags {
     display: flex;
     flex-wrap: wrap;
