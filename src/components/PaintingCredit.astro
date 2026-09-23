@@ -1,0 +1,116 @@
+---
+import type { Attribution, Painting } from "../lib/paintings";
+
+interface Props {
+  painting: Painting;
+  /** Set on hero use, where a tall scroll is shown cropped to a band. */
+  cropped?: boolean;
+}
+
+const { painting, cropped = false } = Astro.props;
+const showsDetail = cropped && painting.croppedInHero;
+
+const badges: Record<Attribution, string> = {
+  named: "Catalogued as Tang Yin",
+  attributed: "Catalogued as attributed to Tang Yin",
+  after: "Catalogued as after Tang Yin",
+};
+
+// Built as one string rather than as sibling expressions, because JSX drops
+// the whitespace around an expression that sits on its own line and the
+// rendered credit runs its sentences together.
+const creditText = [
+  painting.artistLine,
+  painting.date,
+  painting.medium,
+  `${painting.museum}, ${painting.accession}`,
+  painting.creditLine,
+  painting.licence,
+]
+  .map((part) => part.replace(/\.$/, ""))
+  .join(". ");
+---
+
+<figcaption class="painting-credit" data-attribution={painting.attribution}>
+  <span class="painting-credit-badge">{badges[painting.attribution]}</span>
+  <span class="painting-credit-body">
+    {showsDetail && <span class="painting-credit-detail">Detail. </span>}
+    <cite>{painting.title}</cite>{`. ${creditText}. `}
+    <a href={painting.url} rel="noopener">Museum record</a>
+  </span>
+</figcaption>
+
+{
+  cropped && (
+    <style
+      is:global
+      set:html={`.at-hero-image{object-position:${painting.heroFocus};}`}
+    />
+  )
+}
+
+<style>
+  .painting-credit {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--at-spacing-xs) var(--at-spacing-sm);
+    align-items: baseline;
+    margin-block: var(--at-spacing-sm) var(--at-spacing-lg);
+    padding-block-start: var(--at-spacing-xs);
+    border-block-start: 1px solid var(--at-border);
+    color: var(--at-text-muted);
+    font-size: var(--at-font-size-xs);
+    line-height: 1.5;
+  }
+
+  .painting-credit-badge {
+    flex: none;
+    padding: 0.15em 0.6em;
+    border: 1px solid var(--at-border);
+    border-radius: var(--at-border-radius);
+    color: var(--at-text-secondary);
+    font-family: var(--at-font-mono);
+    font-size: 0.9em;
+    letter-spacing: 0.02em;
+  }
+
+  /* The three labels are the museums' own, and the difference between them is
+     the thing the course is about, so they are told apart at a glance rather
+     than only on a close read. */
+  .painting-credit[data-attribution="attributed"] .painting-credit-badge,
+  .painting-credit[data-attribution="after"] .painting-credit-badge {
+    border-style: dashed;
+    color: var(--at-text);
+  }
+
+  .painting-credit[data-attribution="after"] .painting-credit-badge {
+    border-width: 2px;
+  }
+
+  .painting-credit-body {
+    flex: 1 1 18rem;
+    min-width: 0;
+  }
+
+  .painting-credit-detail {
+    font-family: var(--at-font-mono);
+    font-size: 0.9em;
+  }
+
+  .painting-credit cite {
+    color: var(--at-text);
+    font-style: italic;
+  }
+
+  .painting-credit a {
+    color: inherit;
+    text-decoration-style: dotted;
+    text-underline-offset: 0.2em;
+    white-space: nowrap;
+  }
+
+  .painting-credit a:hover,
+  .painting-credit a:focus-visible {
+    color: var(--at-link-hover, var(--at-link));
+  }
+</style>

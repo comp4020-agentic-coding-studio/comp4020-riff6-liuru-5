@@ -8,7 +8,9 @@ import ContentLayout from "astro-theme-university/layouts/ContentLayout.astro";
 import AttributionChallenge from "../../components/AttributionChallenge.astro";
 import PaintingReference from "../../components/PaintingReference.astro";
 import MarkingModel from "../../components/MarkingModel.astro";
+import PaintingCredit from "../../components/PaintingCredit.astro";
 import { formatCourseDate } from "../../lib/dates";
+import { paintingForWeek } from "../../lib/paintings";
 import { graphCollections, siteConfig } from "../../site-config";
 
 export async function getStaticPaths() {
@@ -21,13 +23,17 @@ export async function getStaticPaths() {
 
 const { assessment } = Astro.props;
 const { Content } = await render(assessment);
+const painting = paintingForWeek(assessment.data.week);
 ---
 
 <ContentLayout
   title={assessment.data.title}
   description={assessment.data.description}
+  heroImage={painting.image}
+  heroImageAlt={painting.alt}
   {...siteConfig}
 >
+  <PaintingCredit painting={painting} cropped />
   {
     assessment.data.draft && (
       <Callout type="warning">

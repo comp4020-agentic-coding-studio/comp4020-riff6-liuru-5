@@ -4,8 +4,10 @@ import { getPublishedCollection } from "astro-course-university/content";
 import RelatedContent from "astro-course-university/components/RelatedContent.astro";
 import SpecList from "astro-course-university/components/SpecList.astro";
 import ContentLayout from "astro-theme-university/layouts/ContentLayout.astro";
+import PaintingCredit from "../../components/PaintingCredit.astro";
 import TeachingTeam from "../../components/TeachingTeam.astro";
 import { formatCourseDate } from "../../lib/dates";
+import { paintingForWeek } from "../../lib/paintings";
 import { graphCollections, sessionLabels, siteConfig } from "../../site-config";
 
 export async function getStaticPaths() {
@@ -15,13 +17,17 @@ export async function getStaticPaths() {
 
 const { session } = Astro.props;
 const { Content } = await render(session);
+const painting = paintingForWeek(session.data.week);
 ---
 
 <ContentLayout
   title={`Week ${session.data.week} ${sessionLabels.singular}: ${session.data.title}`}
   description={session.data.description}
+  heroImage={painting.image}
+  heroImageAlt={painting.alt}
   {...siteConfig}
 >
+  <PaintingCredit painting={painting} cropped />
   <p><strong>{formatCourseDate(session.data.date)}</strong></p>
   <Content />
   <SpecList spec={session.data.spec}>
