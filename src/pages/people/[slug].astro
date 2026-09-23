@@ -3,14 +3,19 @@ import { render } from "astro:content";
 import { getPublishedCollection } from "astro-course-university/content";
 import RelatedContent from "astro-course-university/components/RelatedContent.astro";
 import ContentLayout from "astro-theme-university/layouts/ContentLayout.astro";
+import PaintingCredit from "../../components/PaintingCredit.astro";
+import { paintingForWeek } from "../../lib/paintings";
 import { graphCollections, siteConfig } from "../../site-config";
 
 export async function getStaticPaths() {
   const people = await getPublishedCollection("people");
-  return people.map((person) => ({ params: { slug: person.id }, props: { person } }));
+  return people.map((person, index) => ({
+    params: { slug: person.id },
+    props: { person, index },
+  }));
 }
 
-const { person } = Astro.props;
+const { person, index } = Astro.props;
 const { Content } = await render(person);
 
 // Map the role enum (convenor|tutor|guest|other) to display labels rather than
@@ -29,15 +34,21 @@ const photoAlt = typeof rawPhotoAlt === "string" ? rawPhotoAlt : "";
 // Every page owes a description --- it is what a search result and a shared
 // link show underneath the title.
 const description = person.data.description;
+// Nobody on the teaching team has a portrait, which left these pages as the
+// only ones on the site with no image at all. A plate stands in until one
+// does, and a real photo still wins the moment it is added.
+const painting = paintingForWeek(index + 2);
+const photo = person.data.photo ?? undefined;
 ---
 
 <ContentLayout
   title={person.data.title}
   description={description}
-  heroImage={person.data.photo ?? undefined}
-  heroImageAlt={photoAlt}
+  heroImage={photo ?? painting.image}
+  heroImageAlt={photo ? photoAlt : painting.alt}
   {...siteConfig}
 >
+  {!photo && <PaintingCredit painting={painting} cropped />}
   <dl>
     {roleLabel && (
       <>
