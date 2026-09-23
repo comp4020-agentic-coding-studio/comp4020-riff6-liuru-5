@@ -19,15 +19,16 @@ related:
 
 ## Before the seminar
 
-Choose the painting you'll argue about in the attribution note, if you
-haven't already, and bring the best reproduction you can find of it.
+Bring the supplied *Pine Pavilion after Rain* reference, your brushwork
+experiments and a work-in-progress study. Bring brushes and paper or your
+digital painting setup.
 
 ## In the seminar
 
 The first half is a shared exercise: describing the same stroke, from the
-same securely attributed painting, in the vocabulary from lecture, until the
+same generated course reference, in the vocabulary from lecture, until the
 room converges on similar descriptions. The second half turns that
-vocabulary on your own attribution-note painting, in pairs, with your
+vocabulary on your own painted study, in pairs, with your
 partner pushing back on any description vague enough to mean nothing.
 
 ## Afterwards

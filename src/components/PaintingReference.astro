@@ -1,0 +1,41 @@
+---
+import { Image } from "astro:assets";
+import reference from "../assets/images/pine-pavilion-after-rain.avif";
+---
+
+<figure class="painting-reference">
+  <a href={reference.src} target="_blank" rel="noopener" aria-label="Open Pine Pavilion after Rain reference image at full size (new tab)">
+    <Image
+      src={reference}
+      alt="Ink landscape on ivory paper: a leaning pine and small pavilion beside a stream, rocky banks and layered mountains fading into mist."
+      widths={[480, 768, 1024]}
+      sizes="(max-width: 600px) 100vw, 480px"
+    />
+  </a>
+  <figcaption>
+    <strong>Pine Pavilion after Rain</strong> · Shared painting reference<br />
+    An original AI-generated teaching image inspired by Tang Yin, not a historical
+    work or an authenticated painting by him. Study the pine, rock textures and
+    mist washes. <a href={reference.src} download="pine-pavilion-after-rain.avif">Download the reference</a>.
+  </figcaption>
+</figure>
+
+<style>
+  .painting-reference {
+    margin: 2rem 0;
+  }
+
+  .painting-reference img {
+    display: block;
+    width: 100%;
+    max-width: 30rem;
+    height: auto;
+  }
+
+  .painting-reference figcaption {
+    max-width: 42rem;
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+</style>

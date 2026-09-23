@@ -22,6 +22,8 @@ spec:
     seals, colophons, market context) against one named painting
   - keeps an explicit evidence log, including evidence that complicates or
     contradicts the eventual conclusion
+  - includes two illustrated comparisons with your painted study and three
+    proposed experiments for the final painting
   - reaches a stated verdict with a stated confidence level, not an
     open-ended "more research is needed"
 related:
@@ -47,6 +49,16 @@ assessment is testing.
 You may use the painting your seminar group shortlisted in week 7--8, or a
 different disputed painting entirely, provided its dispute is documented in
 the literature rather than invented for the assignment.
+
+## Connect the dossier to your painting
+
+Your subject here must be a documented disputed historical painting, not the
+generated course reference or your own study. Include a **maker’s comparison**
+within the word count: place two cited details from the historical reproduction
+beside corresponding passages in your first painted study. Explain what making
+those marks helped you notice, and where similarity stops being evidence of
+authorship. Finish with three concrete brushwork or composition experiments
+that you will carry into the final painting project.
 
 ## What you submit
 
