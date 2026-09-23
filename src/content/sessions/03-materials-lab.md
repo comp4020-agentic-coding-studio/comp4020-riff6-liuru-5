@@ -1,12 +1,12 @@
 ---
 title: "Materials lab"
 description:
-  Handling period-correct paper, silk and pigment samples under Idris's
+  Handling period-correct paper, silk and pigment samples under Boris's
   supervision, and reading a real fibre-analysis report.
 week: 3
 date: 2027-03-08
 teachers:
-  - idris-fenn
+  - boris-klyaksin
 spec:
   - you can describe what a fibre or pigment analysis report is actually
     testing, in plain language
@@ -14,7 +14,7 @@ spec:
     doesn't fully support
 related:
   - lectures/week-03
-  - people/idris-fenn
+  - people/boris-klyaksin
 ---
 
 ## Before the seminar
@@ -25,7 +25,7 @@ evaluate.
 
 ## In the seminar
 
-Idris runs a small hands-on station: paper and silk samples of different
+Boris runs a small hands-on station: paper and silk samples of different
 ages under magnification, and a walk-through of how a real fibre or pigment
 report gets produced. The second half works through your assigned case
 report line by line, separating what the underlying test actually measured

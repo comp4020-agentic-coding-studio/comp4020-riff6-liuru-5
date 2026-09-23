@@ -6,7 +6,7 @@ description:
 week: 10
 date: 2027-05-10
 teachers:
-  - marisol-quaye
+  - vera-somneva
 spec:
   - you can describe one Zhang Daqian forgery case in enough specific detail
     to explain what actually fooled the experts involved

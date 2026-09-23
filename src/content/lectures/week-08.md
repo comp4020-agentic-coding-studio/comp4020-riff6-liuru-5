@@ -6,7 +6,7 @@ description:
 week: 8
 date: 2027-04-26
 teachers:
-  - marisol-quaye
+  - vera-somneva
 related:
   - sessions/08-case-study
   - assessments/dossier

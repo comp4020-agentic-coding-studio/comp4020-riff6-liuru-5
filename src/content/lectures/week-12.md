@@ -6,7 +6,7 @@ description: >-
 week: 12
 date: 2027-05-24
 teachers:
-  - marisol-quaye
+  - vera-somneva
 related:
   - sessions/12-defense
   - assessments/final-project

@@ -6,7 +6,7 @@ description:
 week: 6
 date: 2027-03-29
 teachers:
-  - marisol-quaye
+  - vera-somneva
 related:
   - sessions/06-colophon-reading
 ---

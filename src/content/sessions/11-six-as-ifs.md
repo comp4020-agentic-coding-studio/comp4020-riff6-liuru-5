@@ -6,7 +6,7 @@ description:
 week: 11
 date: 2027-05-17
 teachers:
-  - marisol-quaye
+  - vera-somneva
 spec:
   - you can explain what each of the six images in the gatha is doing, not
     just recite the list

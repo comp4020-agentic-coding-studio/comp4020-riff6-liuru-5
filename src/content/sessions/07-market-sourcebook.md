@@ -6,7 +6,7 @@ description:
 week: 7
 date: 2027-04-19
 teachers:
-  - marisol-quaye
+  - vera-somneva
 spec:
   - your seminar group has agreed on three shortlisted paintings and can say
     why each is genuinely disputed, not just obscure

@@ -6,7 +6,7 @@ description:
 week: 2
 date: 2027-03-01
 teachers:
-  - marisol-quaye
+  - vera-somneva
 spec:
   - you can state the verbal-method verdict and the visual-method verdict for
     your assigned painting, and whether they agree

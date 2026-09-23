@@ -6,7 +6,7 @@ description:
 week: 2
 date: 2027-03-01
 teachers:
-  - marisol-quaye
+  - vera-somneva
 related:
   - sessions/02-verbal-visual
 ---

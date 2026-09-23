@@ -6,7 +6,7 @@ description:
 week: 5
 date: 2027-03-22
 teachers:
-  - idris-fenn
+  - boris-klyaksin
 spec:
   - you can match a seal impression against a reference set and say what
     would make the match strong or weak
@@ -15,7 +15,7 @@ spec:
 related:
   - lectures/week-05
   - assessments/attribution-note
-  - people/idris-fenn
+  - people/boris-klyaksin
 ---
 
 ## Before the seminar
@@ -25,7 +25,7 @@ seminar before it's due.
 
 ## In the seminar
 
-Idris runs the seal-matching exercise from lecture against a reference set
+Boris runs the seal-matching exercise from lecture against a reference set
 of dated impressions, including at least one known forged or recut seal
 students have to catch without being told which one it is. The last half
 hour is a swap: exchange drafts with a partner and mark, on paper, the one

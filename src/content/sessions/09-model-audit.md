@@ -1,12 +1,12 @@
 ---
 title: "Model audit"
 description:
-  Running Wren's stroke-level classifier against the semester's shortlist,
+  Running Nina's stroke-level classifier against the semester's shortlist,
   then trying to break it.
 week: 9
 date: 2027-05-03
 teachers:
-  - wren-okafor
+  - nina-pikseleva
 spec:
   - you can state what the classifier's training set actually contained, and
     one way that could bias its output
@@ -14,7 +14,7 @@ spec:
     wrong
 related:
   - lectures/week-09
-  - people/wren-okafor
+  - people/nina-pikseleva
 ---
 
 ## Before the seminar
@@ -24,7 +24,7 @@ number if not.
 
 ## In the seminar
 
-Wren runs the stroke-level classifier from lecture live against the
+Nina runs the stroke-level classifier from lecture live against the
 semester's shortlisted paintings and a few securely attributed controls.
 Working in pairs, try to construct an input --- a cropped detail, a
 mirrored image, a securely attributed painting from outside the training

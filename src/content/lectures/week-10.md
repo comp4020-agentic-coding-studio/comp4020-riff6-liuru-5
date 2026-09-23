@@ -6,7 +6,7 @@ description:
 week: 10
 date: 2027-05-10
 teachers:
-  - marisol-quaye
+  - vera-somneva
 related:
   - sessions/10-forger-biography
 ---

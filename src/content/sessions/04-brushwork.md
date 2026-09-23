@@ -6,7 +6,7 @@ description:
 week: 4
 date: 2027-03-15
 teachers:
-  - marisol-quaye
+  - vera-somneva
 spec:
   - you can describe a specific stroke using the seminar's shared vocabulary,
     not general impressions

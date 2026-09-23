@@ -6,7 +6,7 @@ description:
 week: 6
 date: 2027-03-29
 teachers:
-  - marisol-quaye
+  - vera-somneva
 spec:
   - you can name every claimant in your assigned colophon chain and what
     each one is actually claiming

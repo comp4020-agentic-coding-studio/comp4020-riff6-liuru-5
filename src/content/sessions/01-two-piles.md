@@ -6,7 +6,7 @@ description:
 week: 1
 date: 2027-02-22
 teachers:
-  - marisol-quaye
+  - vera-somneva
 spec:
   - you can name which pile you'd put each of the six reproductions in, and why
   - you can point to the specific feature that moved a reproduction from one

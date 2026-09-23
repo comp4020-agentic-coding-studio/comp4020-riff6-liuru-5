@@ -6,7 +6,7 @@ description:
 week: 4
 date: 2027-03-15
 teachers:
-  - marisol-quaye
+  - vera-somneva
 related:
   - sessions/04-brushwork
   - assessments/attribution-note

@@ -6,7 +6,7 @@ description:
 week: 8
 date: 2027-04-26
 teachers:
-  - marisol-quaye
+  - vera-somneva
 spec:
   - you have applied at least three distinct evidence types to the shortlisted
     painting and logged where they agreed and disagreed

@@ -6,7 +6,7 @@ description:
 week: 12
 date: 2027-05-24
 teachers:
-  - marisol-quaye
+  - vera-somneva
 spec:
   - you have defended your verdict live and answered at least one question
     that named a specific weakness in it

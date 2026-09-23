@@ -6,14 +6,14 @@ description:
 week: 9
 date: 2027-05-03
 teachers:
-  - wren-okafor
+  - nina-pikseleva
 slides: /decks/week-09/
 related:
   - sessions/09-model-audit
-  - people/wren-okafor
+  - people/nina-pikseleva
 ---
 
-Guest week, taught by Wren Okafor. Stroke-level attribution models --- the
+Guest week, taught by Nina Pikseleva. Stroke-level attribution models --- the
 line of work that includes Ahmed Elgammal's stroke-based analysis of
 Picasso and Matisse drawings, and brush-stroke classifiers trained
 specifically on Chinese ink-wash painting --- learn to separate hands from
@@ -28,7 +28,7 @@ was trained to recognise, which means it inherits every misattribution
 already baked into its training set, states its answer with total
 confidence regardless of whether the question was fair, and cannot explain
 its reasoning in terms a human argument can weigh against the seal or the
-colophon. Wren's own framing, used all week: a model that agrees with the
+colophon. Nina's own framing, used all week: a model that agrees with the
 connoisseurs is not yet interesting, and one that disagrees is not yet
 trustworthy.
 
